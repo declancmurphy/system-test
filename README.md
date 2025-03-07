@@ -12,7 +12,7 @@ This framework has been built with the assumption that it would be utilised by p
 
 Tests are divided and structured on a per-platform basis under "/tests" and tests are grouped under functional areas or types in "test_*.py" files (following pytest convention).
 
-# SETUP
+# Setup
 
 Given the assumptions made, this framework assumes you are running a debian-OS like Ubuntu 22.04, if needed, download an iso from here and setup a VM using your desired virtualisation technology: https://releases.ubuntu.com/jammy/
 
@@ -58,7 +58,7 @@ One common issue can be found with XOrg not starting properly on the host machin
 ps aux | grep Xorg
 ```
 
-# APPROACH
+# Approach
 
 Technology Stack:
 
@@ -101,7 +101,7 @@ One authentication token has been pre-generated and hardcoded, indicated in "use
 
 I have used the pytest-order to make sure rate limit testing happen last, so as to not affect other tests.
 
-# FUTURE IMPROVEMENTS
+# Improvements
 
 The below lists areas for improvement given available time to expand the framework capability.
 
