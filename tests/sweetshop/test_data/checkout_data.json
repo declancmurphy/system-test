@@ -1,0 +1,30 @@
+[
+    { "data_type": "valid",
+      "data": {
+        "name": "Alice",
+        "email": "alice@example.com",
+        "address": "123 Street",
+        "country": "London",
+        "city": "Bristol",
+        "postcode": "SW1A 1AA",
+        "card_name": "Name",
+        "card_num": "1234567812345678",
+        "card_expiry": "01/02",
+        "card_security": "111"
+        }
+    },
+    { "data_type": "invalid",
+      "data": {
+        "name": "123",
+        "email": "alice@example.com",
+        "address": "123 Street",
+        "country": "London",
+        "city": "Bristol",
+        "postcode": "SW1A 1AA",
+        "card_name": "Name",
+        "card_num": "1234567812345678",
+        "card_expiry": "01/02",
+        "card_security": "111"
+        }
+    }
+]

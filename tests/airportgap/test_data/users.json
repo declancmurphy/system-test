@@ -1,0 +1,4 @@
+[
+    {"email": "valid@user.com", "password": "validpwd", "token": "9eZuT8qcakNvU2ARsZHVwdYj", "auth": "yes"},
+    {"email": "invalid@user.com", "password": "invalidpwd", "token": "invalidauthtoken", "auth": "no"}
+]

@@ -1,0 +1,17 @@
+Known limitations/issues with SweetShop:
+- No ability to register a user
+- No ability to search products (all products displayed but no search/filter option)
+- No checking of valid users, able to enter any credentials of valid form and have a "successful" login:
+    - "successful" does not actual provide authentication, only routes to the page: https://sweetshop.netlify.app/00efc23d-b605-4f31-b97b-6bb276de447e.html
+    - given there is no authentication, user does not stay logged in and basket tracking is done by cookies and not by user
+    - this means that order history is fixed and is also not done on a per-user basis
+- No ability to reduce quantity of items in basket, only delete all of each product type
+- Adding Standard Shipping (£1.99) does not calculate correctly, appends rather than performing mathematically correct addition if no penny ammounts, results in incorrect result or NaN if penny amounts
+- No datatype validation on basket form fields (e.g. string acceptable in "Credit card number" field)
+- Promo code not functional (no error messaging)
+- Can submit checkout form without any products in basket
+- Image display issue on browse page for "Wham Bars" product
+- Accessibility: prices on products could be aligned
+- Social links only displayed on login page and have no valid href (currently "#")
+- Login button has no accessible selector (suggest using something similar to id="submitLogin")
+- id="name" on both checkout name fields

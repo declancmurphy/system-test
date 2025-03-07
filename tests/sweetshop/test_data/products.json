@@ -1,0 +1,5 @@
+[
+    {"product_name": "Chocolate Cups", "quantity": 1},
+    {"product_name": "Sherbet Discs", "quantity": 3},
+    {"product_name": "Invalid Product", "quantity": 2}
+]

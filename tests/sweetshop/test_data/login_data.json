@@ -1,0 +1,6 @@
+[
+    {"email": "test@user.com", "password": "qwerty", "expected_result": "success"},
+    {"email": "test@user.com", "password": "badpwd", "expected_result": "fail"},
+    {"email": "invalid@user.com", "password": "qwerty", "expected_result": "fail"},
+    {"email": "invalidemail.com", "password": "random_password", "expected_result": "bad_email"}
+]

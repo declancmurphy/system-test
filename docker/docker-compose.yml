@@ -1,0 +1,31 @@
+services:
+  test-runner:
+    container_name: test-runner
+    build:
+      context: ${ROOT_DIR}
+      dockerfile: docker/Dockerfile
+    environment:
+      # declare container environment variables
+      - ROOT_DIR=/system-test
+      - DISPLAY=${DISPLAY}
+      - BROWSER=${BROWSER}
+      - TEST_PATH=${TEST_PATH}
+      - HEADLESS=${HEADLESS}
+      - KEEP_ALIVE=${KEEP_ALIVE}
+      - SELENIUM_REMOTE_URL=http://selenium-${BROWSER}:4444/wd/hub
+    volumes:
+      # forward display for headful testing
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      # mount tests directory (rather than copy in) to make testing changes more efficient
+      - ${ROOT_DIR}/tests:/system-test/tests
+    depends_on:
+      # add browsers for multi-browser support
+      - selenium-chrome
+
+  # add additional services for multi-browser support
+  selenium-chrome:
+    # uses prebuilt docker image to launch selenium grid in standalone mode
+    image: selenium/standalone-chrome
+    shm_size: "2g"
+    ports:
+      - "4444:4444"
